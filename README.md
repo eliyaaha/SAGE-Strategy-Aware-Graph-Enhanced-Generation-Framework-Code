@@ -1,7 +1,5 @@
 # SAGE: A Strategy-Aware Graph-Enhanced Generation Framework for Online Counseling
 
-### **ACM UMAP 2026** &middot; Eliya Naomi Aharon, Meytal Grimland, Joy Benatov, Avi Segal, Loona Ben Dayan, Inbar Shenfeld, Yossi Levi Belz, Kobi Gal
-#### Ben-Gurion University of the Negev &middot; University of Haifa &middot; Sahar &middot; University of Edinburgh
 > This repository contains the implementation, experiments, and evaluations accompanying the paper "SAGE: A Strategy-Aware Graph-Enhanced Generation Framework For Online Counseling", accepted at the **ACM UMAP 2026** conference.
 
 ## Overview
