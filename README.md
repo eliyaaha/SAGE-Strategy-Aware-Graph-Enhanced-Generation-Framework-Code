@@ -4,3 +4,7 @@
 
 ## Overview
 This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework developed as a decision-support tool to assist mental health experts during online counseling sessions. By integrating **Heterogeneous Graph Transformers (HGT)** for strategy prediction with a dynamic graph-injection mechanism into LLMs, the framework generates recommended intervention messages that are both contextually and strategically aligned with clinical practices.
+
+## Citation
+If you find our work or code useful for your research, please cite our paper:
+```bibtex
