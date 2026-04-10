@@ -27,6 +27,17 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
 * `models_checkpoints/` & `outputs/`: These directories are automatically created during runtime to store model artifacts, fine-tuning checkpoints, and final evaluation CSVs.
 * `experiments/`: Contains standalone scripts for baseline comparisons and ablation testing.
 
+## Getting Started
+* Installation: `pip install -r requirements.txt`
+* Hardware: NVIDIA RTX 6000 Ada.
+* Pipeline Execution: Execute the following scripts in order to reproduce the SAGE framework results:
+    ```
+    python scripts/train_gnn.py
+    python scripts/train_llm_ga.py
+    python scripts/run_generation.py
+    ```
+    
+
 ## Dataset
 Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to protect participant privacy and comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page and follow the application instructions provided there.
 
