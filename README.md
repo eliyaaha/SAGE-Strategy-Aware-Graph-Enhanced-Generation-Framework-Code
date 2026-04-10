@@ -7,25 +7,25 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
 
 ## Repository Structure
 ### Pipeline Overview:
-1. **src/:** Houses the foundational logic of the pipeline.
+1. **`src/:`** Houses the foundational logic of the pipeline.
   * `preprocessing.py`: Handles initial data cleaning and structural preparation.
   * `graph_utils.py`: Manages the construction of heterogeneous graph representations.
   * `prompt_utils.py`: Formats contextual data for the language model.
   * `gen_metrics.py` & `metrics.py`: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
 
-2. **models/:** Defines the underlying architectures.
-  * hgt_model.py: The Heterogeneous Graph Transformer for strategy prediction.
-  * sage_generator.py: The hybrid architecture integrating graph embeddings into the LLM.
+2. **`models/:`** Defines the underlying architectures.
+  * `hgt_model.py`: The Heterogeneous Graph Transformer for strategy prediction.
+  * `sage_generator.py`: The hybrid architecture integrating graph embeddings into the LLM.
 
-3.** scripts/:** The primary execution scripts for the SAGE framework.
-  * train_gnn.py: Orchestrates the graph-based strategy training.
-  * train_llm_ga.py: Manages the fine-tuning of the SAGE generator.
-  * run_generation.py: Executes the full inference and evaluation pipeline.
+3.** `scripts/:`** The primary execution scripts for the SAGE framework.
+  * `train_gnn.py`: Orchestrates the graph-based strategy training.
+  * `train_llm_ga.py`: Manages the fine-tuning of the SAGE generator.
+  * `run_generation.py`: Executes the full inference and evaluation pipeline.
 
 ### Artifacts & Storage:
-* config/: Centralizes all variables.
-* models_checkpoints/ & outputs/: These directories are automatically created during runtime to store model artifacts, fine-tuning checkpoints, and final evaluation CSVs.
-* experiments/: Contains standalone scripts for baseline comparisons and ablation testing.
+* `config/:` Centralizes all variables.
+* `models_checkpoints/` & `outputs/`: These directories are automatically created during runtime to store model artifacts, fine-tuning checkpoints, and final evaluation CSVs.
+* `experiments/`: Contains standalone scripts for baseline comparisons and ablation testing.
 
 ## Dataset
 Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to protect participant privacy and comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page and follow the application instructions provided there.
