@@ -30,7 +30,8 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
 ## Getting Started
 * **Installation**: `pip install -r requirements.txt`
 * **Hardware**: NVIDIA RTX 6000 Ada.
-* **Pipeline** Execution: Execute the following scripts in order to reproduce the SAGE framework results:
+* **Pipeline Execution**: Execute the following scripts in order to reproduce the SAGE framework results:
+  
     ```bash
     python scripts/train_gnn.py
     python scripts/train_llm_ga.py
