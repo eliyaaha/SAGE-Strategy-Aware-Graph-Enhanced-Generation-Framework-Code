@@ -40,7 +40,18 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
     
 
 ## Dataset
-Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to protect participant privacy and comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page and follow the application instructions provided there.
+The dataset includes 150 anonymized Hebrew conversations provided by Sahar. Each sample consists of:
+* Utterances and speaker roles
+* Conversation metadata (session/message IDs, age, gender)
+* Distress labels annotated at the end of the session
+
+The data is prepared using two primary steps:
+* Preprocessing: Consecutive messages from the same speaker are merged into speech blocks to represent individual conversational turns.
+* Theory-Grounded Augmentation: Help-seeker utterances are mapped to the Suicide-Risk Factors (SRF) lexicon.
+
+Caregiver interventions are further categorized into three therapeutic strategies based on domain-expert annotations: Reflection, Exploration, and Suggestion.
+
+> Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to protect participant privacy and comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page and follow the application instructions provided there.
 
 ## Citation
 If you find our work or code useful for your research, please cite our paper:
