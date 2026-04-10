@@ -8,16 +8,16 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
 ## Repository Structure
 ### Pipeline Overview:
 1. **`src/:`** Houses the foundational logic of the pipeline.
-  * `preprocessing.py`: Handles initial data cleaning and structural preparation.
-  * `graph_utils.py`: Manages the construction of heterogeneous graph representations.
-  * `prompt_utils.py`: Formats contextual data for the language model.
-  * `gen_metrics.py` & `metrics.py`: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
+   * `preprocessing.py`: Handles initial data cleaning and structural preparation.
+   * `graph_utils.py`: Manages the construction of heterogeneous graph representations.
+   * `prompt_utils.py`: Formats contextual data for the language model.
+   * `gen_metrics.py` & `metrics.py`: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
 
 2. **`models/:`** Defines the underlying architectures.
   * `hgt_model.py`: The Heterogeneous Graph Transformer for strategy prediction.
   * `sage_generator.py`: The hybrid architecture integrating graph embeddings into the LLM.
 
-3.** `scripts/:`** The primary execution scripts for the SAGE framework.
+3. ** `scripts/:`** The primary execution scripts for the SAGE framework.
   * `train_gnn.py`: Orchestrates the graph-based strategy training.
   * `train_llm_ga.py`: Manages the fine-tuning of the SAGE generator.
   * `run_generation.py`: Executes the full inference and evaluation pipeline.
