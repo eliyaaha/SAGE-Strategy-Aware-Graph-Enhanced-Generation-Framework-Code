@@ -6,12 +6,12 @@
 This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework developed as a decision-support tool to assist mental health experts during online counseling sessions. By integrating **Heterogeneous Graph Transformers (HGT)** for strategy prediction with a dynamic graph-injection mechanism into LLMs, the framework generates recommended intervention messages that are both contextually and strategically aligned with clinical practices.
 
 ## Repository Structure
-**Pipeline Overview:**
+### Pipeline Overview:
 1. **src/:** Houses the foundational logic of the pipeline.
-  * preprocessing.py: Handles initial data cleaning and structural preparation.
-  * graph_utils.py: Manages the construction of heterogeneous graph representations.
-  * prompt_utils.py: Formats contextual data for the language model.
-  * gen_metrics.py & metrics.py: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
+  * `preprocessing.py`: Handles initial data cleaning and structural preparation.
+  * `graph_utils.py`: Manages the construction of heterogeneous graph representations.
+  * `prompt_utils.py`: Formats contextual data for the language model.
+  * `gen_metrics.py` & `metrics.py`: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
 
 2. **models/:** Defines the underlying architectures.
   * hgt_model.py: The Heterogeneous Graph Transformer for strategy prediction.
@@ -22,7 +22,7 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
   * train_llm_ga.py: Manages the fine-tuning of the SAGE generator.
   * run_generation.py: Executes the full inference and evaluation pipeline.
 
-**Artifacts & Storage:**
+### Artifacts & Storage:
 * config/: Centralizes all variables.
 * models_checkpoints/ & outputs/: These directories are automatically created during runtime to store model artifacts, fine-tuning checkpoints, and final evaluation CSVs.
 * experiments/: Contains standalone scripts for baseline comparisons and ablation testing.
