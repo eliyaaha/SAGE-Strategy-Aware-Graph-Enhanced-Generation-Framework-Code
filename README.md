@@ -14,13 +14,13 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
    * `gen_metrics.py` & `metrics.py`: Defines evaluation protocols for both **Next Strategy Classifier** and **Recommended Response Generator**.
 
 2. **`models/:`** Defines the underlying architectures.
-  * `hgt_model.py`: The Heterogeneous Graph Transformer for strategy prediction.
-  * `sage_generator.py`: The hybrid architecture integrating graph embeddings into the LLM.
+    * `hgt_model.py`: The Heterogeneous Graph Transformer for strategy prediction.
+    * `sage_generator.py`: The hybrid architecture integrating graph embeddings into the LLM.
 
-3. ** `scripts/:`** The primary execution scripts for the SAGE framework.
-  * `train_gnn.py`: Orchestrates the graph-based strategy training.
-  * `train_llm_ga.py`: Manages the fine-tuning of the SAGE generator.
-  * `run_generation.py`: Executes the full inference and evaluation pipeline.
+3. **`scripts/:`** The primary execution scripts for the SAGE framework.
+    * `train_gnn.py`: Orchestrates the graph-based strategy training.
+    * `train_llm_ga.py`: Manages the fine-tuning of the SAGE generator.
+    * `run_generation.py`: Executes the full inference and evaluation pipeline.
 
 ### Artifacts & Storage:
 * `config/:` Centralizes all variables.
