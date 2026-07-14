@@ -1,9 +1,26 @@
 # SAGE: A Strategy-Aware Graph-Enhanced Generation Framework for Online Counseling
 
-> This repository contains the implementation, experiments, and evaluations accompanying the paper "SAGE: A Strategy-Aware Graph-Enhanced Generation Framework For Online Counseling", accepted at the **ACM UMAP 2026** conference.
+> This repository contains the implementation, experiments, and evaluations accompanying the paper "SAGE: A Strategy-Aware Graph-Enhanced Generation Framework For Online Counseling", published at the **ACM UMAP 2026** conference.
 
 ## Overview
 This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework developed as a decision-support tool to assist mental health experts during online counseling sessions. By integrating **Heterogeneous Graph Transformers (HGT)** for strategy prediction with a dynamic graph-injection mechanism into LLMs, the framework generates recommended intervention messages that are both contextually and strategically aligned with clinical practices.
+
+## Results
+
+### Strategy Classification (HGT)
+| Model | F1 | MCC |
+|---|---|---|
+| AlephBERT (No Graph) | 0.60 | 0.12 |
+| Utterance Layer Only | 0.76 | 0.57 |
+| **Full HGT (SAGE)** | **0.77** | **0.59** |
+
+### Response Generation Quality
+| Configuration | BERTScore | PPL |
+|---|---|---|
+| Vanilla | 0.617 | 540.488 |
+| Vanilla FT | 0.690 | 182.255 |
+| GA FT | 0.698 | 12.709 |
+| **SAGE** | **0.701** | 26.153 |
 
 ## Repository Structure
 ### Pipeline Overview:
@@ -29,7 +46,7 @@ This work introduces **SAGE**, a **Strategy-Aware Graph-Enhanced** framework dev
 
 ## Getting Started
 * **Installation**: `pip install -r requirements.txt`
-* **Hardware**: NVIDIA RTX 6000 Ada.
+* **Hardware**: NVIDIA RTX 6000 Ada
 * **Pipeline Execution**: Execute the following scripts in order to reproduce the SAGE framework results:
   
     ```bash
@@ -45,14 +62,24 @@ The dataset includes 150 anonymized Hebrew conversations provided by Sahar. Each
 * Conversation metadata (session/message IDs, age, gender)
 * Distress labels annotated at the end of the session
 
-The data is prepared using two primary steps:
+The data is prepared using two primary steps (`preprocessing.py`):
 * Preprocessing: Consecutive messages from the same speaker are merged into speech blocks to represent individual conversational turns.
 * Theory-Grounded Augmentation: Help-seeker utterances are mapped to the Suicide-Risk Factors (SRF) lexicon.
 
 Caregiver interventions are further categorized into three therapeutic strategies based on domain-expert annotations: Reflection, Exploration, and Suggestion.
 
-> Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to protect participant privacy and comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page and follow the application instructions provided there.
+
+>  Due to the sensitive nature of mental health counseling dialogues, the full dataset is not publicly available to comply with ethical standards. Access to anonymized subsets may be granted for non-commercial academic research purposes. To request access, please visit the [*Help-Seeking Corpus*](https://resources.nnlp-il.mafat.ai/?search=help-seeking-corpus) page.
 
 ## Citation
 If you find our work or code useful for your research, please cite our paper:
 ```bibtex
+@inproceedings{aharon2026sage,
+  title={SAGE: A Strategy-Aware Graph-Enhanced Generation Framework For Online Counseling},
+  author={Aharon, Eliya Naomi and Grimland, Meytal and Segal, Avi and Ben Dayan, Loona and Shenfeld, Inbar and Levi Belz, Yossi and Gal, Kobi},
+  booktitle={Proceedings of the 34th ACM Conference on User Modeling, Adaptation and Personalization},
+  pages={435--439},
+  year={2026},
+  doi={10.1145/3774935.3806785}
+}
+```
